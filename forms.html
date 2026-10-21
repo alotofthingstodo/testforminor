@@ -6,6 +6,7 @@
 </head>
 <body>
 <a id="top"></a>
+
 <h1>Путешествуем по России</h1>
 <p>Учебный сайт о местах для отдыха и самостоятельных поездках по России.</p>
 
@@ -30,12 +31,13 @@
 </div>
 <hr>
 
-<h3><a id="head1">Контактные данные</a></h3>
+<h3>Заполните первую форму, если хотите отправить контактные данные, и вторую — чтобы оставить заявку на путешествие!</h3>
+<br>
+
+<h2><a id="head1">Контактные данные:</a></h2>
 <p>Форма отправляет на сервер контактные данные автора сайта.</p>
-<!--
-<form action="http://185.182.111.214:7633/cgi-bin/form_api.py" method="get" target="_self">
--->
-<form action="../../cgi-bin/form_api.py" method="get" target="_self" id="ContactForm" name="ContactForm">
+
+<form action="https://www.google.com" id="ContactForm" name="ContactForm" target="_blank">
     <p>Фамилия: <input type="text" name="last_name" value="Акопян" size="20"></p>
     <p>Имя: <input type="text" name="first_name" value="Анастас" size="20"></p>
     <p>Группа: <input type="text" name="group" value="БИСТР252" size="20"></p>
@@ -43,18 +45,27 @@
     <p>Электронная почта: <input type="email" name="email" value="freelancfortrier@gmail.com" size="30"></p>
     <p>Дата отправки сообщения: <input type="date" name="message_date" value="2026-10-21"></p>
     <p>Название файла: <input type="text" name="000_file_name" value="BISTR252_Akopyan_contacts.txt" size="30"></p>
-    <p>Тип записи в файл: <select name="010_mode">
-        <option value="a">a - дозаписать в файл</option>
-        <option value="w">w - очистить файл и записать в файл</option>
-    </select></p>
+    <p>Тип записи в файл:
+        <select name="010_mode">
+            <option value="a">a - дозаписать в файл</option>
+            <option value="w">w - очистить файл и записать в файл</option>
+        </select>
+    </p>
+
     <input type="hidden" name="function" value="page">
     <input type="hidden" name="page_id" value="3">
 
-    <p><input type="reset" name="Reset" value="Обновить"> <input type="submit" name="submit" value="Отправить контактные данные"></p>
+    <p>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить форму">
+    </p>
 </form>
+
 <div align="right"><a href="#top" target="_self">К началу страницы</a></div>
 
-<h3><a id="head2">Заявка на путешествие</a></h3>
+<br>
+
+<h2><a id="head2">Заявка на путешествие:</a></h2>
 <p>Как оформляется заявка:</p>
 <ol>
     <li>Выбор типа отдыха
@@ -67,48 +78,68 @@
     <li>Дополнительные услуги</li>
     <li>Отправка заявки</li>
 </ol>
+
 <figure>
-    <a href="images/city.jpg" target="_blank"><img src="images/city_thumb.jpg" width="100" height="67" alt="Открыть большое фото: вечерний город"></a>
+    <a href="images/city.jpg" target="_blank">
+        <img src="images/city_thumb.jpg" width="100" height="67" alt="Открыть большое фото: вечерний город">
+    </a>
     <figcaption>Вечерний город — один из вариантов для заявки (миниатюра; по клику открывается большое изображение 600×400).</figcaption>
 </figure>
-<!--
-<form action="http://185.182.111.214:7633/cgi-bin/form_api.py" method="get" target="_self">
--->
-<form action="../../cgi-bin/form_api.py" method="get" target="_self" id="TripRequestForm" name="TripRequestForm">
+
+<form action="https://www.google.com" id="TripRequestForm" name="TripRequestForm" target="_blank">
     <p>Ваше имя: <input type="text" name="tourist_name" value="Анастас" size="20"></p>
     <p>Количество человек: <input type="number" name="people_count" value="2" min="1" max="20"></p>
+
     <p>Тип отдыха:
         <input type="radio" name="holiday_type" value="mountains" checked> Горы
         <input type="radio" name="holiday_type" value="sea"> Море
         <input type="radio" name="holiday_type" value="city"> Город
     </p>
+
     <p>Дополнительные услуги:
         <input type="checkbox" name="extra_guide" value="yes" checked> Экскурсовод
         <input type="checkbox" name="extra_hotel" value="yes"> Подобрать гостиницу
         <input type="checkbox" name="extra_transfer" value="yes"> Трансфер
     </p>
+
     <p>Дата поездки: <input type="date" name="trip_date" value="2026-12-01"></p>
     <p>Код заявки: <input type="password" name="request_code" value="1234" size="9"></p>
-    <p>Регион поездки: <select name="region">
-        <option value="caucasus">Кавказ</option>
-        <option value="crimea">Крым</option>
-        <option value="ural">Урал</option>
-        <option value="baikal">Байкал</option>
-    </select></p>
-    <p>Комментарий:<br><textarea name="comment" cols="60" rows="4">Хочу узнать подробнее о поездке.</textarea></p>
+
+    <p>Регион поездки:
+        <select name="region">
+            <option value="caucasus">Кавказ</option>
+            <option value="crimea">Крым</option>
+            <option value="ural">Урал</option>
+            <option value="baikal">Байкал</option>
+        </select>
+    </p>
+
+    <p>Комментарий:<br>
+        <textarea name="comment" cols="60" rows="4">Хочу узнать подробнее о поездке.</textarea>
+    </p>
+
     <input type="hidden" name="form_type" value="trip_request">
+
     <p>Название файла: <input type="text" name="000_file_name" value="BISTR252_Akopyan_request.txt" size="30"></p>
-    <p>Тип записи в файл: <select name="010_mode">
-        <option value="a">a - дозаписать в файл</option>
-        <option value="w">w - очистить файл и записать в файл</option>
-    </select></p>
+    <p>Тип записи в файл:
+        <select name="010_mode">
+            <option value="a">a - дозаписать в файл</option>
+            <option value="w">w - очистить файл и записать в файл</option>
+        </select>
+    </p>
+
     <input type="hidden" name="function" value="page">
     <input type="hidden" name="page_id" value="3">
 
-    <p><input type="reset" name="Reset" value="Обновить"> <input type="submit" name="submit" value="Отправить заявку"></p>
+    <p>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+    </p>
 </form>
+
 <div align="right"><a href="#top" target="_self">К началу страницы</a></div>
 <hr>
+
 <p>Автор сайта: Акопян Анастас, группа БИСТР252.</p>
 <p><a href="index.html" target="_self">На начальную страницу</a></p>
 </body>
